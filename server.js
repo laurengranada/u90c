@@ -5,7 +5,6 @@ var express = require("express");
 var cheerio = require("cheerio");
 var request = require("request");
 var bodyParser = require("body-parser");
-
 //setting port
 var PORT = process.env.PORT || 3000;
 //start express
@@ -25,35 +24,55 @@ app.use(router);
 // 		console.log("mongoose connection is successful!");
 // 	}
 // });
+var goonersData = [];
+var redsData = [];
+var spursData = [];
+var unitedData = [];
 
-//scrapes Gooners crowdrise link
-request('https://www.crowdrise.com/o/en/campaign/austin-goonersupperninety', function (error, response, html) {
-  if (!error && response.statusCode == 200) {
-    var $ = cheerio.load(html);
-    var goonersData = $('.cta-title').children().first().text();
-      console.log("Gooners: " + goonersData);
-  }
-});
+function scrape(){
+	//scrapes Gooners crowdrise link
+	request('https://www.crowdrise.com/o/en/campaign/austin-goonersupperninety', function (error, response, html) {
+	  if (!error && response.statusCode == 200) {
+	    var $ = cheerio.load(html);
+	    var goonersPulled = $('.cta-title').children().first().text();
+	    (goonersData).push(goonersPulled);
+	      // $('#raised-gooners').append(goonersData);
+	      console.log(goonersData);
+	  }
+	});
 
-//scrapes Austin Reds crowdrise link
-request('https://www.crowdrise.com/o/en/campaign/austin-reds-and-upper-ninety', function (error, response, html) {
-  if (!error && response.statusCode == 200) {
-    var $ = cheerio.load(html);
-    var redsData = $('.cta-title').children().first().text();
-      console.log("Austin Reds: " + redsData);
-  }
-});
+	//scrapes Austin Reds crowdrise link
+	request('https://www.crowdrise.com/o/en/campaign/austin-reds-and-upper-ninety', function (error, response, html) {
+	  if (!error && response.statusCode == 200) {
+	    var $ = cheerio.load(html);
+	    var redsPulled = $('.cta-title').children().first().text();
+	    (redsData).push(redsPulled);
+	      // $('#raised-reds').append(redsData);
+	      console.log(redsData);
+	  }
+	});
 
-//scrapes Austin Spurs crowdrise link
-request('https://www.crowdrise.com/o/en/campaign/austin-spurs-and-upper-ninety', function (error, response, html) {
-  if (!error && response.statusCode == 200) {
-    var $ = cheerio.load(html);
-    var spursData = $('.cta-title').children().first().text();
-    $('#raised-spurs').append(spursData);
-      console.log("Austin Spurs: " + spursData);
+	//scrapes Austin Spurs crowdrise link
+	request('https://www.crowdrise.com/o/en/campaign/austin-spurs-and-upper-ninety', function (error, response, html) {
+	  if (!error && response.statusCode == 200) {
+	    var $ = cheerio.load(html);
+	    var spursData = $('.cta-title').children().first().text();
+	   	  $('#raised-spurs').append(spursData);
+	      console.log("Austin Spurs: " + spursData);
 
-  }
-});
+	  }
+	});
+
+	//scrapes Austin Manchester crowdrise link
+	request('https://www.crowdrise.com/o/en/campaign/austinmanchesterunitedupperninety', function (error, response, html) {
+	  if (!error && response.statusCode == 200) {
+	    var $ = cheerio.load(html);
+	    var unitedData = $('.cta-title').children().first().text();
+	      console.log("Austin Manchester: " + unitedData);
+	  } $('#raised-united').append(unitedData);
+	});
+};
+
 
 app.listen(PORT, function() {
   console.log("App running on port" + PORT);
@@ -65,3 +84,5 @@ module.exports = function(router){
 		res.render("public/index.html");
 	});
 }
+ 
+scrape();
