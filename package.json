@@ -1,0 +1,28 @@
+{
+  "name": "u90c",
+  "version": "1.0.0",
+  "description": "fundraiser for upper ninety cup",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "mongojs": "^2.6.0",
+    "mongoose": "^5.1.4",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurengranada/u90c.git"
+  },
+  "author": "lg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurengranada/u90c/issues"
+  },
+  "homepage": "https://github.com/laurengranada/u90c#readme"
+}

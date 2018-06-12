@@ -1,0 +1,110 @@
+/*Css page*/
+html, body{
+	background-image: url("../images/field.jpg");
+	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+
+}
+
+.logo-here{
+	text-align: center;
+	margin: 10px;
+	display: inline-block;
+
+}
+
+.header-text{
+	color: white;
+	font-family: 'Shrikhand', cursive;
+	font-size: 60px;
+	padding-top: 10px;
+	text-shadow: 3px 3px 4px black;
+/*	display: inline-block;*/
+}
+
+h1{
+	font-family: 'Patua One', cursive;
+	color: black;
+	font-size: 30px;
+	text-align: center;
+}
+
+p{
+	font-family: 'Open Sans', sans-serif;
+}
+
+h4{
+	font-family: 'Patua One', cursive;
+	font-style: italic;
+	text-align: center;
+}
+
+#about{
+	background-color: white;
+	padding: 50px;
+	margin-bottom: 60px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#fundraisers{
+	background-color: white;
+	padding: 50px;
+	margin-bottom: 90px;
+	border-radius: 10px;
+}
+
+.info{
+	text-align: center;
+	color: white;
+	font-weight: lighter;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 10px;
+}
+
+#social-media{
+	padding-bottom: 20px;
+	text-align: center;
+}
+.upper-cup-logo{
+	-webkit-filter: drop-shadow(3px 3px 2px black);
+ 	filter: drop-shadow(3px 3px 2px black);
+}
+
+#center-text{
+	text-align: center;
+}
+
+#bold-text{
+	text-align: center;
+	font-family: 'Patua One', cursive;
+	font-size: 18px;
+}
+
+.icons{
+	padding-right: 15px;
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+ 	filter: drop-shadow(5px 5px 5px #222);
+}
+
+#numbers{
+	display: inline-block;
+}
+
+#outOf{
+	padding-top: 55px;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	font-weight: lighter;
+}
+
+#raised{
+	display: inline-block;
+	padding-top: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bolder;
+	font-size: 45px;
+}
