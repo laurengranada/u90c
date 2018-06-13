@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upper Ninety Cup</title>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 	<script
+	  src="https://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script> -->
+	<!-- custom favicon -->
+	<link rel="icon" href="/assets/images/favicon.ico">
+	<!-- mobile friendly -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!-- Latest compiled and minified CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Patua+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700|Shrikhand" rel="stylesheet">
+	<!-- font awesome for glyphicons-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<!-- my css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="container logo-here justify-content-center">
+			<img src="assets/images/cup-logo.png" class="upper-cup-logo" height="100">
+			<h1 class="header-text">Live Results</h1>
+		</div>
+
+		<div class="container-fluid" id="fundraisers">
+	{{!-- 		<div class="container button-here">
+				<button type="button" class="btn btn-warning refresh-scrape">
+					<i class="fas fa-sync-alt"></i> Refresh
+				</button>
+			</div> --}}
+		<a href="https://www.crowdrise.com/o/en/campaign/austin-goonersupperninety">
+			<div class="row">
+				<div class="col">
+					<img id="goon" src="assets/images/gooners.jpg" height="160">
+				</div>
+				<div class="col" id="numbers">
+				{{!-- 	<h2 id="raised-gooners">$0</h2>
+					<h3 id="outOf"> of $5,000</h3> --}}
+					<h3 id="outOf">View Austin Gooners' CrowdRise</h3>
+				</div>
+			</div>
+		</a>
+			<hr>
+		<a href="https://www.crowdrise.com/o/en/campaign/austin-reds-and-upper-ninety">	
+			<div class="row">
+				<div class="col">
+					<img id="red" src="assets/images/reds.png" height="160">
+				</div>
+				<div class="col" id="numbers">
+				{{!-- 	<h2 id="raised-reds">$0</h2>
+					<h3 id="outOf"> of $5,000</h3> --}}
+					<h3 id="outOf">View Austin Reds' CrowdRise</h3>
+				</div>
+			</div>
+		</a>
+			<hr>
+		<a href="https://www.crowdrise.com/o/en/campaign/austin-spurs-and-upper-ninety">
+			<div class="row">
+				<div class="col">
+					<img id="spur" src="assets/images/spurs.png" height="160">
+				</div>
+				<div class="col" id="numbers">
+			{{!-- 		<h2 id="raised-spurs">$0</h2>
+					<h3 id="outOf"> of $5,000</h3> --}}
+					<h3 id="outOf">View Austin Spurs' CrowdRise</h3>
+				</div>
+			</div>
+		</a>
+			<hr>
+		<a href="https://www.crowdrise.com/o/en/campaign/austinmanchesterunitedupperninety">
+			<div class="row">
+				<div class="col">
+					<img id="uni" src="assets/images/united.jpg" height="160">
+				</div>
+				<div class="col" id="numbers">
+					{{!-- <h2 id="raised-united">$0</h2>
+					<h3 id="outOf"> of $5,000</h3> --}}
+					<h3 id="outOf">View Austin Manchester United's CrowdRise</h3>
+				</div>
+			</div>
+		</a>
+		</div>
+
+		<div class="container-fluid" id="about">
+			<h1>About</h1>
+			<hr>
+			<p>The Upper Ninety Cup is a brand new fundraising tournament taking place during this summer's World Cup. Every dollar raised goes directly to Upper Ninety, a local non-profit that uses soccer as an educational tool to help teens from low-income Austin communities thrive.</p> 
+			<p>
+			We know that when Austinites come together through activism and compassion, there is no limit to what we can accomplish. This summer, we invite you to participate in the Upper Ninety Cup and support low-income students through your love of the beautiful game.</p>
+			<br>
+			<h4>How do you participate?</h4>
+			<br>
+			<p>Throughout the World Cup, English Premier League Supporter groups will be competing to raise money for Upper Ninety at their respective bars. </p>
+			<p id="center-text">The groups and bars that are participating are as follows:</p>
+			<p id="bold-text">Austin Spurs at Mr. Tramps <br>
+				Austin Gooners at the Tavern <br>
+				Austin Red at B.D. Rileys at Mueller<br>
+				Manchester United at Black Sheep Lodge</p>
+			<p>Each of the bars and supporters groups have pledged to raise money through various means:</p>
+			<p id="bold-p">- Donate directly to their CrowdRise pages<br>
+			- Show up to participating bars and purchase an Upper Ninety Gold, and a percentage of your tab will be donated to Upper Ninety<br>
+			- Contact your supporters group or show up to a participating bar to learn about other ways your team is raising money </p>
+			<p>The group that raises the most money at the end of the World Cup will receive the Upper Ninety Cup trophy at our Haymaker World Cup Final Watch Party on Sunday, July 15. </p>
+			<p>About Upper Ninety: Upper Ninety is a positive youth development program for teens in low-income Austin communities. Our out-of-school program combines soccer with social-emotional learning, mindfulness, and other educational tools that help middle and high school students find a path to academic and personal success.</p>
+			<p>For more information, visit <a href="https://www.upperninety.org">www.upperninety.org</a></p>
+
+		</div>
+		<div class="container">
+			<p class="info">Created by <a href="https://www.laurengranada.com/">laurengranada.com</a> for Upper Ninety</p>
+		</div>
+		<div class="container" id="social-media">
+			<!-- twitter icon -->
+			<a href="https://twitter.com/UpperNinetyATX">
+				<img class="icons" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IgogICAgIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIgogICAgIHZpZXdCb3g9IjAgMCA1MCA1MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmOyI+PGcgaWQ9InN1cmZhY2UxIj48cGF0aCBzdHlsZT0iICIgZD0iTSA1MC4wNjI1IDEwLjQzNzUgQyA0OC4yMTQ4NDQgMTEuMjU3ODEzIDQ2LjIzNDM3NSAxMS44MDg1OTQgNDQuMTUyMzQ0IDEyLjA1ODU5NCBDIDQ2LjI3NzM0NCAxMC43ODUxNTYgNDcuOTEwMTU2IDguNzY5NTMxIDQ4LjY3NTc4MSA2LjM3MTA5NCBDIDQ2LjY5MTQwNiA3LjU0Njg3NSA0NC40ODQzNzUgOC40MDIzNDQgNDIuMTQ0NTMxIDguODYzMjgxIEMgNDAuMjY5NTMxIDYuODYzMjgxIDM3LjU5NzY1NiA1LjYxNzE4OCAzNC42NDA2MjUgNS42MTcxODggQyAyOC45NjA5MzggNS42MTcxODggMjQuMzU1NDY5IDEwLjIxODc1IDI0LjM1NTQ2OSAxNS44OTg0MzggQyAyNC4zNTU0NjkgMTYuNzAzMTI1IDI0LjQ0OTIxOSAxNy40ODgyODEgMjQuNjI1IDE4LjI0MjE4OCBDIDE2LjA3ODEyNSAxNy44MTI1IDguNTAzOTA2IDEzLjcxODc1IDMuNDI5Njg4IDcuNDk2MDk0IEMgMi41NDI5NjkgOS4wMTk1MzEgMi4wMzkwNjMgMTAuNzg1MTU2IDIuMDM5MDYzIDEyLjY2Nzk2OSBDIDIuMDM5MDYzIDE2LjIzNDM3NSAzLjg1MTU2MyAxOS4zODI4MTMgNi42MTMyODEgMjEuMjMwNDY5IEMgNC45MjU3ODEgMjEuMTc1NzgxIDMuMzM5ODQ0IDIwLjcxMDkzOCAxLjk1MzEyNSAxOS45NDE0MDYgQyAxLjk1MzEyNSAxOS45ODQzNzUgMS45NTMxMjUgMjAuMDI3MzQ0IDEuOTUzMTI1IDIwLjA3MDMxMyBDIDEuOTUzMTI1IDI1LjA1NDY4OCA1LjUgMjkuMjA3MDMxIDEwLjE5OTIxOSAzMC4xNTYyNSBDIDkuMzM5ODQ0IDMwLjM5MDYyNSA4LjQyOTY4OCAzMC41MTU2MjUgNy40OTIxODggMzAuNTE1NjI1IEMgNi44MjgxMjUgMzAuNTE1NjI1IDYuMTgzNTk0IDMwLjQ1MzEyNSA1LjU1NDY4OCAzMC4zMjgxMjUgQyA2Ljg2NzE4OCAzNC40MTAxNTYgMTAuNjY0MDYzIDM3LjM5MDYyNSAxNS4xNjAxNTYgMzcuNDcyNjU2IEMgMTEuNjQ0NTMxIDQwLjIzMDQ2OSA3LjIxMDkzOCA0MS44NzEwOTQgMi4zOTA2MjUgNDEuODcxMDk0IEMgMS41NTg1OTQgNDEuODcxMDk0IDAuNzQyMTg4IDQxLjgyNDIxOSAtMC4wNTg1OTM4IDQxLjcyNjU2MyBDIDQuNDg4MjgxIDQ0LjY0ODQzOCA5Ljg5NDUzMSA0Ni4zNDc2NTYgMTUuNzAzMTI1IDQ2LjM0NzY1NiBDIDM0LjYxNzE4OCA0Ni4zNDc2NTYgNDQuOTYwOTM4IDMwLjY3OTY4OCA0NC45NjA5MzggMTcuMDkzNzUgQyA0NC45NjA5MzggMTYuNjQ4NDM4IDQ0Ljk0OTIxOSAxNi4xOTkyMTkgNDQuOTMzNTk0IDE1Ljc2MTcxOSBDIDQ2Ljk0MTQwNiAxNC4zMTI1IDQ4LjY4MzU5NCAxMi41IDUwLjA2MjUgMTAuNDM3NSBaICI+PC9wYXRoPjwvZz48L3N2Zz4=" height="60">
+			</a>
+			<!-- facebook icon -->
+			<a href="https://www.facebook.com/UpperNinetyATX/">
+				<img class="icons"src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IgogICAgIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIgogICAgIHZpZXdCb3g9IjAgMCA1MCA1MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmOyI+ICAgIDxwYXRoIGQ9Ik00MSw0SDlDNi4yNCw0LDQsNi4yNCw0LDl2MzJjMCwyLjc2LDIuMjQsNSw1LDVoMzJjMi43NiwwLDUtMi4yNCw1LTVWOUM0Niw2LjI0LDQzLjc2LDQsNDEsNHogTTM3LDE5aC0yYy0yLjE0LDAtMywwLjUtMywyIHYzaDVsLTEsNWgtNHYxNWgtNVYyOWgtNHYtNWg0di0zYzAtNCwyLTcsNi03YzIuOSwwLDQsMSw0LDFWMTl6Ij48L3BhdGg+PC9zdmc+" height="60">
+			</a>
+			<!-- insta icon -->
+			<a href="https://www.instagram.com/upperninetyatx/">
+				<img class="icons" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IgogICAgIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIgogICAgIHZpZXdCb3g9IjAgMCA1MCA1MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmOyI+ICAgIDxwYXRoIGQ9Ik0gMTYgMyBDIDguODMgMyAzIDguODMgMyAxNiBMIDMgMzQgQyAzIDQxLjE3IDguODMgNDcgMTYgNDcgTCAzNCA0NyBDIDQxLjE3IDQ3IDQ3IDQxLjE3IDQ3IDM0IEwgNDcgMTYgQyA0NyA4LjgzIDQxLjE3IDMgMzQgMyBMIDE2IDMgeiBNIDM3IDExIEMgMzguMSAxMSAzOSAxMS45IDM5IDEzIEMgMzkgMTQuMSAzOC4xIDE1IDM3IDE1IEMgMzUuOSAxNSAzNSAxNC4xIDM1IDEzIEMgMzUgMTEuOSAzNS45IDExIDM3IDExIHogTSAyNSAxNCBDIDMxLjA3IDE0IDM2IDE4LjkzIDM2IDI1IEMgMzYgMzEuMDcgMzEuMDcgMzYgMjUgMzYgQyAxOC45MyAzNiAxNCAzMS4wNyAxNCAyNSBDIDE0IDE4LjkzIDE4LjkzIDE0IDI1IDE0IHogTSAyNSAxNiBDIDIwLjA0IDE2IDE2IDIwLjA0IDE2IDI1IEMgMTYgMjkuOTYgMjAuMDQgMzQgMjUgMzQgQyAyOS45NiAzNCAzNCAyOS45NiAzNCAyNSBDIDM0IDIwLjA0IDI5Ljk2IDE2IDI1IDE2IHoiPjwvcGF0aD48L3N2Zz4=" height="60">
+			</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/page.js"></script>
+</body>
+</html>
