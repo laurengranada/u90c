@@ -1,64 +1,39 @@
 //dependencies
+
 var cheerio = require("cheerio");
-var request = require("request");
+var rp = require('request-promise');
 
 var scrape = function(callback){
 	//scrapes Gooners crowdrise link
-	request('https://www.crowdrise.com/o/en/campaign/austin-goonersupperninety', function (error, response, html) {
-	  if (!error && response.statusCode == 200) {
-	    var $ = cheerio.load(html);
-	    //empty array to save gooner data
-	    var goonersData = [];
-	    var raisedGoon = $('.cta-title').children().first().text();
-	    //object we will push to gooner data array
-	    // var dataToAdd = {
-	    // 	amount: raisedAmt
-	    // };
-	    goonersData.push(raisedGoon);
-	    };
-	  callback(goonersData[goonersData.length - 1]);
-	});
-
-	// scrapes Austin Reds crowdrise link
-	request('https://www.crowdrise.com/o/en/campaign/austin-reds-and-upper-ninety', function (error, response, html) {
-	  if (!error && response.statusCode == 200) {
-	    var $ = cheerio.load(html);
-	    //empty array to save reds data
-	    var redsData = [];
-	    var raisedRed = $('.cta-title').children().first().text();
-	    //object we will push to reds data array
-	    redsData.push(raisedRed);
-	  };
-	  callback(redsData[redsData.length - 1]);
-	});
-
-	//scrapes Austin Spurs crowdrise link
-	request('https://www.crowdrise.com/o/en/campaign/austin-spurs-and-upper-ninety', function (error, response, html) {
-	  if (!error && response.statusCode == 200) {
-	    var $ = cheerio.load(html);
-	    //empty array to save spurs data
-	    var spursData = [];
-	    var raisedSpur = $('.cta-title').children().first().text();
-	    //object we will push to reds data array
-	    spursData.push(raisedSpur);
-	  };
-	  callback(spursData[spursData.length - 1]);
-	});
-
-	scrapes Austin Manchester crowdrise link
-	request('https://www.crowdrise.com/o/en/campaign/austinmanchesterunitedupperninety', function (error, response, html) {
-	  if (!error && response.statusCode == 200) {
-	    var $ = cheerio.load(html);
-	    //empty array to save 
-	    var unitedData = [];
-	    var raisedAmt = $('.cta-title').children().first().text();
-	    //object we will push to united data
-	    var dataToAdd = {
-	    	amount: raisedAmt
-	    };
-	    unitedData.push(dataToAdd);
-	  };
-	  callback(unitedData[unitedData.length - 1]);
+	return Promise.all([
+		rp('https://www.crowdrise.com/o/en/campaign/austin-goonersupperninety')
+			.then(html => {
+				var $ = cheerio.load(html);
+				return $('.cta-title').children().first().text();
+			}),
+		rp('https://www.crowdrise.com/o/en/campaign/austin-reds-and-upper-ninety')
+			.then(html => {
+				var $ = cheerio.load(html);
+				return $('.cta-title').children().first().text();
+			}),
+		rp('https://www.crowdrise.com/o/en/campaign/austin-spurs-and-upper-ninety')
+			.then(html => {
+				var $ = cheerio.load(html);
+				return $('.cta-title').children().first().text();
+			}),
+		rp('https://www.crowdrise.com/o/en/campaign/austinmanchesterunitedupperninety')
+			.then(html => {
+				var $ = cheerio.load(html);
+				return $('.cta-title').children().first().text();
+			})
+	])
+	.then(data => {
+		return {
+			goonersAmount: data[0],
+			redsAmount: data[1],
+			spursAmount: data[2],
+			manuAmount: data[3]
+		};
 	});
 };
 
