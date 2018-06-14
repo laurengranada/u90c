@@ -1,13 +1,17 @@
 // javascript page
 $(document).ready(function(){	
 	$(document).on("click", ".refresh-scrape", handleScrape);
-
+	handleScrape();
 
 	// start();
 
 	// function start(){
 	// 	raisedGooners.empty();
 	// };
+
+});
+
+
 
 	function renderGooners(data){
 		var raisedGooners = $('#raised-gooners');
@@ -36,6 +40,3 @@ $(document).ready(function(){
 
 		});
 	};
-});
-
-
