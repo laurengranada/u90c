@@ -9,7 +9,9 @@ module.exports = function(router){
 	});
 
 	router.get("/fetch", function(req, res) {
-		scrape();
-		console.log(goonersData);
+		amountsController.fetch(function(err, docs){
+			res.json(docs);
+			console.log(docs + "route");
+		});
 	});
 };

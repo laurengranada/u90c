@@ -1,29 +1,24 @@
 // javascript page
 $(document).ready(function(){	
-	var raisedGooners = $('#raised-gooners');
 	$(document).on("click", ".refresh-scrape", handleScrape);
-	// (raisedGooners).append("$50");
 
-	start();
 
-	function start(){
-		raisedGooners.empty();
-		$.get("/fetch")
-		.then(function(data){
-			if (data && data.length) {
-          		renderGooners(data);
-        	};
-		});
-	};
+	// start();
 
-	function renderGooners(goonersData){
+	// function start(){
+	// 	raisedGooners.empty();
+	// };
 
+	function renderGooners(data1){
+		var raisedGooners = $('#raised-gooners');
+		raisedGooners.html(data1);
+		console.log(raisedGooners);
 	};
 
 	function handleScrape(){
 		$.get("/fetch")
 		.then(function(data){
-			start();
+			renderGooners(data);
 		});
 	};
 });

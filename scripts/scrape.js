@@ -9,30 +9,27 @@ var scrape = function(callback){
 	    var $ = cheerio.load(html);
 	    //empty array to save gooner data
 	    var goonersData = [];
-	    var raisedAmt = $('.cta-title').children().first().text();
+	    var raisedGoon = $('.cta-title').children().first().text();
 	    //object we will push to gooner data array
-	    var dataToAdd = {
-	    	amount: raisedAmt
+	    // var dataToAdd = {
+	    // 	amount: raisedAmt
+	    // };
+	    goonersData.push(raisedGoon);
 	    };
-	    goonersData.push(dataToAdd);
-	    };
-	  callback(goonersData);
+	  callback(goonersData[goonersData.length - 1]);
 	});
 
-	//scrapes Austin Reds crowdrise link
+	// scrapes Austin Reds crowdrise link
 	request('https://www.crowdrise.com/o/en/campaign/austin-reds-and-upper-ninety', function (error, response, html) {
 	  if (!error && response.statusCode == 200) {
 	    var $ = cheerio.load(html);
 	    //empty array to save reds data
 	    var redsData = [];
-	    var raisedAmt = $('.cta-title').children().first().text();
+	    var raisedRed = $('.cta-title').children().first().text();
 	    //object we will push to reds data array
-	    var dataToAdd = {
-	    	amount: raisedAmt
-	    };
-	    redsData.push(dataToAdd);
+	    redsData.push(raisedRed);
 	  };
-	  callback(redsData);
+	  callback(redsData[redsData.length - 1]);
 	});
 
 	//scrapes Austin Spurs crowdrise link
@@ -41,17 +38,14 @@ var scrape = function(callback){
 	    var $ = cheerio.load(html);
 	    //empty array to save spurs data
 	    var spursData = [];
-	    var raisedAmt = $('.cta-title').children().first().text();
+	    var raisedSpur = $('.cta-title').children().first().text();
 	    //object we will push to reds data array
-	    var dataToAdd = {
-	    	amount: raisedAmt
-	    };
-	    spursData.push(dataToAdd);
+	    spursData.push(raisedSpur);
 	  };
-	  callback(spursData);
+	  callback(spursData[spursData.length - 1]);
 	});
 
-	//scrapes Austin Manchester crowdrise link
+	scrapes Austin Manchester crowdrise link
 	request('https://www.crowdrise.com/o/en/campaign/austinmanchesterunitedupperninety', function (error, response, html) {
 	  if (!error && response.statusCode == 200) {
 	    var $ = cheerio.load(html);
@@ -64,7 +58,7 @@ var scrape = function(callback){
 	    };
 	    unitedData.push(dataToAdd);
 	  };
-	  callback(unitedData);
+	  callback(unitedData[unitedData.length - 1]);
 	});
 };
 
