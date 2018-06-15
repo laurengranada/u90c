@@ -132,12 +132,15 @@ a {
 }
 
 /*for mobile*/
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 670px) {
 	#goon{
 		padding-left: 26px;
 	}
 	#spur{
 		padding-left: 30px;
+	}
+	#guinness{
+		height: 50px;
 	}
 }
 
@@ -147,6 +150,9 @@ a {
 	}
 	#spur{
 		padding-left: 50px;
+	}
+		#guinness{
+		height: 70px;
 	}
 }
 
