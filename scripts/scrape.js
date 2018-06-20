@@ -21,18 +21,18 @@ var scrape = function(callback){
 				var $ = cheerio.load(html);
 				return $('.cta-title').children().first().text();
 			}),
-		rp('https://www.crowdrise.com/o/en/campaign/austinmanchesterunitedupperninety')
-			.then(html => {
-				var $ = cheerio.load(html);
-				return $('.cta-title').children().first().text();
-			})
+		// rp('https://www.crowdrise.com/o/en/campaign/austinmanchesterunitedupperninety')
+		// 	.then(html => {
+		// 		var $ = cheerio.load(html);
+		// 		return $('.cta-title').children().first().text();
+		// 	})
 	])
 	.then(data => {
 		return {
 			goonersAmount: data[0],
 			redsAmount: data[1],
 			spursAmount: data[2],
-			manuAmount: data[3]
+			// manuAmount: data[3]
 		};
 	});
 };

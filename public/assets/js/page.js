@@ -25,10 +25,10 @@ $(document).ready(function(){
 		var raisedGooners = $('#raised-spurs');
 		raisedGooners.html(data.spursAmount);
 	};
-	function renderUni(data){
-		var raisedGooners = $('#raised-united');
-		raisedGooners.html(data.manuAmount);
-	};
+	// function renderUni(data){
+	// 	var raisedGooners = $('#raised-united');
+	// 	raisedGooners.html(data.manuAmount);
+	// };
 
 	function handleScrape(){
 		$.get("/fetch")
@@ -36,7 +36,7 @@ $(document).ready(function(){
 			renderGooners(data);
 			renderReds(data);
 			renderSpurs(data);
-			renderUni(data);
+			// renderUni(data);
 
 		});
 	};
