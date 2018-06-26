@@ -5,7 +5,7 @@ Project for Austin Non-Profit Upper Ninety; Upper Ninety Cup is a fundraising ev
 
 This page centralizes all the amounts being raised in real-time for convenience. Inorder to gather the data, I scraped all crowdrise links and displayed the pulled data in the HTML.
 
-![alt text](https://github.com/laurengranada/u90c/blob/master/read-images/homepage)
+![alt text](https://github.com/laurengranada/u90c/blob/master/read-images/homepage.png)
 
 ### Languages/Technologies Used:
 - HTML, CSS, Javascript
